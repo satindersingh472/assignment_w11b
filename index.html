@@ -1,15 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>document</title>
+
+    <title>Food_Store-Home</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
- <script src="js/app.js"> </script>
+
+    <header>
+        <h1>Please select any of the available items below</h1>
+        <h3>Click <Span class="highlight">Order</Span> to buy that item or go to <a href="checkout.html">checkout</a>
+        </h3>
+    </header>
+    <main>
+        <!-- all food items contains every food item -->
+        <div id="all_food_items">
+            <!-- single food item contains one particular food item -->
+            <div class="single_food_item">
+                <!-- single food image is the container for every image -->
+                <div class="single_food_image">
+                    <img src="images/carrot.jpg" alt="carrots bunch">
+                </div>
+                <!-- single food option is the box for name and order button -->
+                <div class="single_food_options">
+                    <h2>Carrots $5/lb</h2>
+                    <button id="buy_carrots">Order</button>
+                </div>
+            </div>
+            <div class="single_food_item">
+                <!-- single food image is the container for every image -->
+                <div class="single_food_image">
+                    <img src="images/cucumber.jpg" alt="cucumber">
+                </div>
+                <!-- single food option is the box for name and order button -->
+                <div class="single_food_options">
+                    <h2>cucumbers $4/lb</h2>
+                    <button id="buy_cucumbers">Order</button>
+                </div>
+            </div>
+            <div class="single_food_item">
+                <!-- single food image is the container for every image -->
+                <div class="single_food_image">
+                    <img src="images/potato.jpg" alt="potato">
+                </div>
+                <!-- single food option is the box for name and order button -->
+                <div class="single_food_options">
+                    <h2>potatoes $7/lb</h2>
+                    <button id="buy_potatoes">Order</button>
+                </div>
+            </div>
+            <div class="single_food_item">
+                <!-- single food image is the container for every image -->
+                <div class="single_food_image">
+                    <img src="images/squash.jpg" alt="orange squash">
+                </div>
+                <!-- single food option is the box for name and order button -->
+                <div class="single_food_options">
+                    <h2>Squash $3/lb</h2>
+                    <button id="buy_squashes">Order</button>
+                </div>
+            </div>
+            <div class="single_food_item">
+                <!-- single food image is the container for every image -->
+                <div class="single_food_image">
+                    <img src="images/tomato.jpg" alt="tomato">
+                </div>
+                <!-- single food option is the box for name and order button -->
+                <div class="single_food_options">
+                    <h2>Tomatoes $2/lb</h2>
+                    <button id="buy_tomatoes">Order</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="js/app.js"> </script>
 </body>
+
 </html>

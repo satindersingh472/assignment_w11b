@@ -1,0 +1,79 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+// center the content in the body
+body {
+    width: 90%;
+    margin: auto;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    display: grid;
+    gap: 20px;
+}
+
+// contains heading of the content
+header {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+
+    h3 {
+        a {
+            text-decoration: none;
+
+        }
+    }
+}
+
+// using to highlight some words with green color 
+.highlight {
+    color: green;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+// all food item contains every food item
+#all_food_items {
+    display: grid;
+    grid-auto-flow: column;
+
+    // single food item class is apllied to every food item 
+    .single_food_item {
+        width: 300px;
+        display: grid;
+        gap: 1vh;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: 2px 2px 2px grey;
+
+        .single_food_image {
+            display: grid;
+        }
+
+        // single food option is a sibling of single food image
+        .single_food_options {
+            display: grid;
+            gap: 1vh;
+
+            h2 {
+                justify-self: center;
+                font-size: 1.3rem;
+                font-weight: normal;
+                word-spacing: 8px;
+            }
+
+            button {
+                padding: 2px;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
