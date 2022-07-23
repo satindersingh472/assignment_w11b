@@ -1,16 +1,18 @@
 let main = document.getElementById(`main`);
 
-let cookies_carrots_json = Cookies.get(`carrots`);
-let cookies_carrots = JSON.parse(cookies_carrots_json);
-main[`innerHTML`] +=
+// function carrots display will display description,name,price and image of the cookie selected
+function carrots_display(details) {
+    main[`innerHTML`] +=
     `<section>
 <h3> You have Selected ${cookies_carrots[`name`]} </h3>
 <p> Price ${cookies_carrots[`price`]}</p>
 </section>`;
 
-let cookies_cucumbers_json = Cookies.get(`cucumbers`);
-let cookies_cucumber = JSON.parse(cookies_cucumbers_json);
-main[`innerHTML`] +=
+}
+// cucumbers display function will display description of the item selected
+
+function cucumbers_display(details) {
+    main[`innerHTML`] +=
     `<section>
 <h3>You have selected ${cookies_cucumber[`name`]}</h3>
 <p>Price ${cookies_cucumber[`price`]}</p>
@@ -19,25 +21,6 @@ main[`innerHTML`] +=
 </div>
 </section>`
     ;
-let cookies_potatoes_json = Cookies.get(`potatoes`);
-let cookies_potatoes = JSON.parse(cookies_potatoes_json);
-
-let cookies_squashes_json = Cookies.get(`squashes`);
-let cookies_squashes = JSON.parse(cookies_squashes_json);
-
-let cookies_tomatoes_json = Cookies.get(`tomatoes`);
-let cookies_tomatoes = JSON.parse(cookies_tomatoes_json);
-
-
-
-// function carrots display will display description,name,price and image of the cookie selected
-function carrots_display(details) {
-
-}
-// cucumbers display function will display description of the item selected
-
-function cucumbers_display(details) {
-
 }
 function potatoes_display(details) {
     main[`innerHTML`] +=
@@ -62,6 +45,21 @@ function tomatoes_display(details) {
 }
 
 
+let cookies_carrots_json = Cookies.get(`carrots`);
+let cookies_carrots = JSON.parse(cookies_carrots_json);
+
+
+let cookies_cucumbers_json = Cookies.get(`cucumbers`);
+let cookies_cucumber = JSON.parse(cookies_cucumbers_json);
+
+let cookies_potatoes_json = Cookies.get(`potatoes`);
+let cookies_potatoes = JSON.parse(cookies_potatoes_json);
+
+let cookies_squashes_json = Cookies.get(`squashes`);
+let cookies_squashes = JSON.parse(cookies_squashes_json);
+
+let cookies_tomatoes_json = Cookies.get(`tomatoes`);
+let cookies_tomatoes = JSON.parse(cookies_tomatoes_json);
 
 //if statement will check if carrots cookies selected and has name value equal to carrots
 if (cookies_carrots[`name`] === `carrots`) {

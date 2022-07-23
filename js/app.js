@@ -31,13 +31,16 @@ let tomatoes = {
 
 // set_cookies_carrots function is to convert carrots object to json and set cookies carrot
 function set_cookies_carrot(details){
-    let carrots_cookies = JSON.stringify(carrots);
-    Cookies.set(`carrots`,carrots_cookies);
+    veggies.push(carrots);
+    let cookies_value_carrots = JSON.stringify(veggies);
+    Cookies.set(`veggies_array`,cookies_value_carrots);
 }
 
 function set_cookies_cucumber(details){
-    let cucumbers_cookies = JSON.stringify(cucumbers);
-    Cookies.set(`cucumbers`,cucumbers_cookies);
+   veggies.push(cucumbers);
+   let cookies_value_cucumbers = JSON.stringify(veggies);
+   Cookies.set(`veggies_array`,cookies_value_cucumbers);
+
 }
 function set_cookies_potatoes(details){
     let potatoes_cookies = JSON.stringify(potatoes);
@@ -65,3 +68,5 @@ squash_order.addEventListener(`click`,set_cookies_squash);
 
 let tomato_order = document.getElementById(`buy_tomatoes`);
 tomato_order.addEventListener(`click`,set_cookies_tomatoes);
+
+let veggies = [];
