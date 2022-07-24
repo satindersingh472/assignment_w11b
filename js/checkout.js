@@ -1,4 +1,4 @@
-
+// function show vegetables will show items on checkout page 
 function show_veggetables(details){
     main[`innerHTML`] += `<section class="main_content">
     <div class="main_content_image"> <img src="${parse_cookies[counter][`image_url`]}" alt ="${parse_cookies[counter][`name`]}"/>  </div> 
@@ -8,10 +8,11 @@ function show_veggetables(details){
     </div>
     </section>`;
 }
-
+// main will grab the element main by id to put innerhtml later on
 let main = document.getElementById(`main`);
-
+// get cookies value from last page
 let get_cookies = Cookies.get([`veggetables`]);
+// parse those cookies we got
 let parse_cookies = JSON.parse(get_cookies);
 
 //if statement will check if  parsed cookies have value of name equal to any veggetable
@@ -26,4 +27,4 @@ if (parse_cookies[counter][`name`] === `carrots`) {
     show_veggetables();
 } else if (parse_cookies[counter][`name`] === `tomatoes`){
     show_veggetables();
-}
+}  
