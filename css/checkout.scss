@@ -4,22 +4,43 @@
 }
 body{
     background-color: antiquewhite;
+    text-align: center;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+#green{
+    a{
+        color: green;
+        text-decoration: none;
+        &:visited{
+            text-decoration: none;
+        }
+    }
 }
 #main{
     box-shadow: 2px 2px 2px gray;
     display: grid;
     margin: 10px;
-    section{
-     margin: 10px;
-        padding: 10px;
-        display: grid;
-        gap: 1vh;
-        h3{
-            font-size: 1.3rem;
-        }
+    display: grid;
+    gap: 20px;
+    .main_content{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     margin: 20px;
+     .main_content_image{
+        height: 150px;
+        width: 150px;
+        justify-self: center;
         img{
-            height: 100px;
-            width: 100pxs;
+            object-fit: cover;
         }
+     }
+     .main_content_description{
+        justify-self: start;
+        text-align: start;
+        align-self: center;
+     }
     }
 }

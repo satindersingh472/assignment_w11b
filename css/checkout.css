@@ -5,19 +5,45 @@
 
 body {
   background-color: antiquewhite;
+  text-align: center;
 }
 
-#main section {
+img {
+  height: 200px;
+  width: 200px;
+}
+
+#green a {
+  color: green;
+  text-decoration: none;
+}
+#green a:visited {
+  text-decoration: none;
+}
+
+#main {
   box-shadow: 2px 2px 2px gray;
-  margin: 10px;
-  padding: 10px;
   display: grid;
-  gap: 1vh;
+  margin: 10px;
+  display: grid;
+  gap: 20px;
 }
-#main section h3 {
-  font-size: 1.3rem;
+#main .main_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
 }
-#main section img {
-  height: 100px;
-  width: 100pxs;
+#main .main_content .main_content_image {
+  height: 150px;
+  width: 150px;
+  justify-self: center;
+}
+#main .main_content .main_content_image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .main_content .main_content_description {
+  justify-self: start;
+  text-align: start;
+  align-self: center;
 }/*# sourceMappingURL=checkout.css.map */

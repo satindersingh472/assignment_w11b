@@ -1,59 +1,68 @@
+let veggies =[];
+
 let carrots = {
     name: `carrots`,
     description: `Fresh carrots from the fields`,
     price: `$5 per pounds`,
-    image_url:`/home/satinder/Desktop/study/innotech/Assignments/w11/assignment_w11b/images/carrot.jpg`
-}
+    image_url:`/assignment_w11b/images/carrot.jpg`
+};
 let cucumbers = {
     name: `cucumbers`,
     description: `Fresh cucumbers from the fields`,
     price: `$4 per pounds`,
-    image_url:`/home/satinder/Desktop/study/innotech/Assignments/w11/assignment_w11b/images/cucumber.jpg`
-}
+    image_url:`/assignment_w11b/images/cucumber.jpg`
+};
 let potatoes = {
     name: `potatoes`,
     description: `Fresh potatoes from the fields`,
     price: `$7 per pounds`,
-    image_url:`/home/satinder/Desktop/study/innotech/Assignments/w11/assignment_w11b/images/potato.jpg`
-}
+    image_url:`/assignment_w11b/images/potato.jpg`
+};
 let squashes = {
     name: `squashes`,
     description: `Fresh squash from the fields`,
     price: `$3 per pounds`,
-    image_url:`/home/satinder/Desktop/study/innotech/Assignments/w11/assignment_w11b/images/squash.jpg`
-}
+    image_url:`/assignment_w11b/images/squash.jpg`
+};
 let tomatoes = {
     name: `tomatoes`,
     description: `Fresh tomatoes from the fields`,
     price: `$2 per pounds`,
-    image_url:`/home/satinder/Desktop/study/innotech/Assignments/w11/assignment_w11b/images/tomato.jpg`
-}
+    image_url:`/assignment_w11b/images/tomato.jpg`
+};
 
 // set_cookies_carrots function is to convert carrots object to json and set cookies carrot
 function set_cookies_carrot(details){
     veggies.push(carrots);
     let cookies_value_carrots = JSON.stringify(veggies);
-    Cookies.set(`veggies_array`,cookies_value_carrots);
+    Cookies.set(`veggetables`,cookies_value_carrots);
 }
 
 function set_cookies_cucumber(details){
    veggies.push(cucumbers);
    let cookies_value_cucumbers = JSON.stringify(veggies);
-   Cookies.set(`veggies_array`,cookies_value_cucumbers);
+   Cookies.set(`veggetables`,cookies_value_cucumbers);
 
 }
 function set_cookies_potatoes(details){
-    let potatoes_cookies = JSON.stringify(potatoes);
-    Cookies.set(`potatoes`,potatoes_cookies);
-}
+    veggies.push(potatoes);
+    let cookies_value_potatoes = JSON.stringify(veggies);
+    Cookies.set(`veggetables`,cookies_value_potatoes);
+ 
+ }
 function set_cookies_squash(details){
-    let squashes_cookies = JSON.stringify(squashes);
-    Cookies.set(`squashes`,squashes_cookies);
-}
+    veggies.push(squashes);
+    let cookies_value_squashes = JSON.stringify(veggies);
+    Cookies.set(`veggetables`,cookies_value_squashes);
+ 
+ }
 function set_cookies_tomatoes(details){
-    let tomatoes_cookies = JSON.stringify(tomatoes);
-    Cookies.set(`tomatoes`,tomatoes_cookies);
-}
+    veggies.push(tomatoes);
+    let cookies_value_tomatoes = JSON.stringify(veggies);
+    Cookies.set(`veggetables`,cookies_value_tomatoes);
+ 
+ }
+
 let carrot_order = document.getElementById(`buy_carrots`);
 carrot_order.addEventListener(`click`,set_cookies_carrot);
 
@@ -69,4 +78,3 @@ squash_order.addEventListener(`click`,set_cookies_squash);
 let tomato_order = document.getElementById(`buy_tomatoes`);
 tomato_order.addEventListener(`click`,set_cookies_tomatoes);
 
-let veggies = [];

@@ -1,85 +1,29 @@
+
+function show_veggetables(details){
+    main[`innerHTML`] += `<section class="main_content">
+    <div class="main_content_image"> <img src="${parse_cookies[counter][`image_url`]}" alt ="${parse_cookies[counter][`name`]}"/>  </div> 
+    <div class="main_content_description">  <h3>  ${parse_cookies[counter][`name`]} ${parse_cookies[counter][`price`]}</h3> 
+           <p> ${parse_cookies[counter][`description`]}</p>
+    
+    </div>
+    </section>`;
+}
+
 let main = document.getElementById(`main`);
 
-// function carrots display will display description,name,price and image of the cookie selected
-function carrots_display(details) {
-    main[`innerHTML`] +=
-    `<section>
-<h3> You have Selected ${cookies_carrots[`name`]} </h3>
-<p> Price ${cookies_carrots[`price`]}</p>
-</section>`;
+let get_cookies = Cookies.get([`veggetables`]);
+let parse_cookies = JSON.parse(get_cookies);
 
+//if statement will check if  parsed cookies have value of name equal to any veggetable
+for (counter = 0; counter < parse_cookies.length;counter++)
+if (parse_cookies[counter][`name`] === `carrots`) {
+    show_veggetables();
+} else if (parse_cookies[counter][`name`] === `cucumbers`){
+    show_veggetables();
+} else if (parse_cookies[counter][`name`] === `potatoes`){
+    show_veggetables();
+} else if (parse_cookies[counter][`name`] === `squashes`){
+    show_veggetables();
+} else if (parse_cookies[counter][`name`] === `tomatoes`){
+    show_veggetables();
 }
-// cucumbers display function will display description of the item selected
-
-function cucumbers_display(details) {
-    main[`innerHTML`] +=
-    `<section>
-<h3>You have selected ${cookies_cucumber[`name`]}</h3>
-<p>Price ${cookies_cucumber[`price`]}</p>
-<div>
-<button id="remove_cucumber"> Delete </button>
-</div>
-</section>`
-    ;
-}
-function potatoes_display(details) {
-    main[`innerHTML`] +=
-        `<section>
-    <h3>You have selected ${cookies_potatoes[`name`]}</h3>
-    <p>Price ${cookies_potatoes[`price`]}</p>
-    </section>`;
-}
-function squashes_display(details) {
-    main[`innerHTML`] +=
-        `<section>
-    <h3>You have selected ${cookies_squashes[`name`]}</h3>
-    <p>Price ${cookies_squashes[`price`]}</p>
-    </section>`;
-}
-function tomatoes_display(details) {
-    main[`innerHTML`] +=
-        `<section>
-    <h3>You have selected ${cookies_tomatoes[`name`]}</h3>
-    <p>Price ${cookies_tomatoes[`price`]}</p>
-    </section>`;
-}
-
-
-let cookies_carrots_json = Cookies.get(`carrots`);
-let cookies_carrots = JSON.parse(cookies_carrots_json);
-
-
-let cookies_cucumbers_json = Cookies.get(`cucumbers`);
-let cookies_cucumber = JSON.parse(cookies_cucumbers_json);
-
-let cookies_potatoes_json = Cookies.get(`potatoes`);
-let cookies_potatoes = JSON.parse(cookies_potatoes_json);
-
-let cookies_squashes_json = Cookies.get(`squashes`);
-let cookies_squashes = JSON.parse(cookies_squashes_json);
-
-let cookies_tomatoes_json = Cookies.get(`tomatoes`);
-let cookies_tomatoes = JSON.parse(cookies_tomatoes_json);
-
-//if statement will check if carrots cookies selected and has name value equal to carrots
-if (cookies_carrots[`name`] === `carrots`) {
-    carrots_display();
-}
-if (cookies_cucumber[`name`] === `cucumbers`) {
-    cucumbers_display();
-}
-if (cookies_potatoes[`name`] === `potatoes`) {
-    potatoes_display();
-}
-if (cookies_squashes[`name`] === `squashes`) {
-    squashes_display();
-}
-if (cookies_tomatoes[`name`] === `tomatoes`) {
-    tomatoes_display();
-}
-
-function delete_cucumber(details) {
-    Cookies.remove(Cookies.get(`cucumbers`));
-}
-let remove_cucumber = document.getElementById(`remove_cucumber`);
-remove_cucumber.addEventListener(`click`, delete_cucumber);
