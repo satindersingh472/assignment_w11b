@@ -49,39 +49,41 @@ function set_cookies_cucumber(details){
    veggies.push(cucumbers);
    let cookies_value_cucumbers = JSON.stringify(veggies);
    Cookies.set(`veggetables`,cookies_value_cucumbers);
-
 }
+// set_cookies_potatoes function is to push potatoes objects to veggies array
+// convert veggies array to json and set cookies veggetables with stringified value
 function set_cookies_potatoes(details){
     veggies.push(potatoes);
     let cookies_value_potatoes = JSON.stringify(veggies);
     Cookies.set(`veggetables`,cookies_value_potatoes);
- 
  }
+// set_cookies_squash function is to push squahes objects to veggies array
+// convert veggies array to json and set cookies veggetables with stringified value
 function set_cookies_squash(details){
     veggies.push(squashes);
     let cookies_value_squashes = JSON.stringify(veggies);
     Cookies.set(`veggetables`,cookies_value_squashes);
- 
  }
+ // set_cookies_tomatoes function is to push tomatoes objects to veggies array
+// convert veggies array to json and set cookies veggetables with stringified value
 function set_cookies_tomatoes(details){
     veggies.push(tomatoes);
     let cookies_value_tomatoes = JSON.stringify(veggies);
     Cookies.set(`veggetables`,cookies_value_tomatoes);
- 
  }
-
+//  below 2 lines will the grab the element by id i.e button and attach it to event listener to invoke the functionl
 let carrot_order = document.getElementById(`buy_carrots`);
 carrot_order.addEventListener(`click`,set_cookies_carrot);
-
+//  below 2 lines will the grab the element by id i.e button and attach it to event listener to invoke the functionl
 let cucumber_order = document.getElementById(`buy_cucumbers`);
 cucumber_order.addEventListener(`click`,set_cookies_cucumber);
-
+//  below 2 lines will the grab the element by id i.e button and attach it to event listener to invoke the functionl
 let potato_order = document.getElementById(`buy_potatoes`);
 potato_order.addEventListener(`click`,set_cookies_potatoes);
-
+//  below 2 lines will the grab the element by id i.e button and attach it to event listener to invoke the functionl
 let squash_order = document.getElementById(`buy_squashes`);
 squash_order.addEventListener(`click`,set_cookies_squash);
-
+//  below 2 lines will the grab the element by id i.e button and attach it to event listener to invoke the functionl
 let tomato_order = document.getElementById(`buy_tomatoes`);
 tomato_order.addEventListener(`click`,set_cookies_tomatoes);
 
