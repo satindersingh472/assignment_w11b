@@ -96,6 +96,4 @@ let cookies_get = Cookies.get([`veggetables`]);
 if (cookies_get) {
     veggies = JSON.parse(cookies_get);
     Cookies.set(`veggetables`, veggies);
-}  else if (cookies_get === `undefined`){
-    alert(`Please select something`);
-}
+}  
